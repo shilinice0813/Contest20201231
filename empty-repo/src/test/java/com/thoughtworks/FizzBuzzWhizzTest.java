@@ -65,5 +65,12 @@ public class FizzBuzzWhizzTest {
         String noice = fizzBuzzWhizz.check(70);
         assert (noice.equals("BuzzWhizz"));
     }
+    @Test  //53 173
+    public void test_FiveThree() {
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz();
+        String noice = fizzBuzzWhizz.check(53);
+        assert (noice.equals("53"));
+    }
+
 }
 

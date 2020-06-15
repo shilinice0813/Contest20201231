@@ -77,5 +77,11 @@ public class FizzBuzzWhizzTest {
         String noice = fizzBuzzWhizz.check(173);
         assert (noice.equals("Fizz"));
     }
+    @Test  //53 173
+    public void test_SevenThree() {
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz();
+        String noice = fizzBuzzWhizz.check(75);
+        assert (noice.equals("Fizz"));
+    }
 }
 

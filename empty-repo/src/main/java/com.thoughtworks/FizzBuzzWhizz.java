@@ -26,7 +26,6 @@ public class FizzBuzzWhizz {
         if(result.length()==0){
             return number+"";
         }
-
         return result.toString();
     }
 }

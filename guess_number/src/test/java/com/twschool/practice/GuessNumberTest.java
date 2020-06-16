@@ -1,5 +1,6 @@
 package com.twschool.practice;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Random;
@@ -11,9 +12,23 @@ public class GuessNumberTest {
         GuessNumber guessNumber=new GuessNumber();
         guessNumber.answer="1234";
         String inputNumber = "1234";
-        guessNumber.check(inputNumber);
+        if(!guessNumber.checkFormat(inputNumber)){
+            return;
+        }
+        String outPut = guessNumber.check(inputNumber);
+        assert(outPut.equals("4A0B"));
     }
-
+    @Test
+    public void Location_PreRight_Number_AllRight(){
+        GuessNumber guessNumber=new GuessNumber();
+        guessNumber.answer="1234";
+        String inputNumber = "5678";
+        if(!guessNumber.checkFormat(inputNumber)){
+            return;
+        }
+        String outPut = guessNumber.check(inputNumber);
+        assert(outPut.equals("0A0B"));
+    }
 
 
 

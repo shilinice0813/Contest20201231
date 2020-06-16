@@ -38,17 +38,14 @@ public class GuessNumber {
             }
         }
         //判断是否是数字
-        if(!number.matches("-?[0-9]+.？[0-9]*")){
+        if(number.matches("-?[0-9]+.？[0-9]*")){
             System.out.println("Wrong Input，Input again");
             return false;
         }
         return  true;
     }
 
-    public void check(String number) {
-        if(!checkFormat(number)){
-            return;
-        }
+    public String check(String number) {
         int countA=0;
         int countB=0;
         //比较位置和数字是否相同
@@ -56,15 +53,16 @@ public class GuessNumber {
             if(this.answer.charAt(i)==number.charAt(i)){
                 countA++;
             }
-            if(this.answer.contains(number.charAt(i)+"")){
+            if(this.answer.contains(number.charAt(i)+"")&&this.answer.charAt(i)!=number.charAt(i)){
                 countB++;
             }
         }
         if(countA==4){
             System.out.println("Right");
-            return;
         }
-        System.out.println(countA+"A"+(countB-countA)+"B");
+        String outPut=countA+"A"+ countB +"B";
+        System.out.println(outPut);
+        return outPut;
     }
 
 }

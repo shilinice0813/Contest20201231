@@ -53,18 +53,26 @@ public class MarRoverTest {
     }
     @Test
     public void move_S_L(){
-
+        MarRover marRover=new MarRover(0,0,Direction.S);
+        marRover.move("L");
+        assert (marRover.equals(new MarRover(0,0,Direction.E)));
     }
     @Test
     public void move_S_R(){
-
+        MarRover marRover=new MarRover(0,0,Direction.S);
+        marRover.move("R");
+        assert (marRover.equals(new MarRover(0,0,Direction.W)));
     }
     @Test
     public void move_W_L(){
-
+        MarRover marRover=new MarRover(0,0,Direction.W);
+        marRover.move("L");
+        assert (marRover.equals(new MarRover(0,0,Direction.S)));
     }
     @Test
     public void move_W_R(){
-
+        MarRover marRover=new MarRover(0,0,Direction.W);
+        marRover.move("R");
+        assert (marRover.equals(new MarRover(0,0,Direction.N)));
     }
 }

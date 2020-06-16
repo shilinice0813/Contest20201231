@@ -4,6 +4,7 @@ import java.util.*;
 
 public class GuessNumber {
     public String answer;
+    //生成随机数
     public void getAnswer(){
         String number = "";
         Random rd = new Random();

@@ -75,4 +75,11 @@ public class MarRoverTest {
         marRover.move("R");
         assert (marRover.equals(new MarRover(0,0,Direction.N)));
     }
+
+    @Test
+    public void move_Rnadom(){
+        MarRover marRover=new MarRover(3,-15,Direction.W);
+        marRover.move("MMRMMRMLLRMMR");
+        assert (marRover.equals(new MarRover(2,-11,Direction.E)));
+    }
 }

@@ -19,7 +19,7 @@ public class GuessNumberTest {
         assert(outPut.equals("4A0B"));
     }
     @Test
-    public void Location_PreRight_Number_AllRight(){
+    public void Location_NoRight_Number_NoRight(){
         GuessNumber guessNumber=new GuessNumber();
         guessNumber.answer="1234";
         String inputNumber = "5678";
@@ -29,10 +29,17 @@ public class GuessNumberTest {
         String outPut = guessNumber.check(inputNumber);
         assert(outPut.equals("0A0B"));
     }
-
-
-
-
+    @Test
+    public void Location_PreRight_Number_PreRight() {
+        GuessNumber guessNumber = new GuessNumber();
+        guessNumber.answer = "1234";
+        String inputNumber = "2436";
+        if (!guessNumber.checkFormat(inputNumber)) {
+            return;
+        }
+        String outPut = guessNumber.check(inputNumber);
+        assert (outPut.equals("1A2B"));
+    }
 
 
 

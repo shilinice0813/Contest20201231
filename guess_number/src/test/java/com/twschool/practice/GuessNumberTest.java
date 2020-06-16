@@ -52,6 +52,16 @@ public class GuessNumberTest {
         String outPut = guessNumber.check(inputNumber);
         assert (outPut.equals("0A1B"));
     }
-
+    @Test
+    public void Location_PreRight_Number_NoRight() {
+        GuessNumber guessNumber = new GuessNumber();
+        guessNumber.answer = "1234";
+        String inputNumber = "1789";
+        if (!guessNumber.checkFormat(inputNumber)) {
+            return;
+        }
+        String outPut = guessNumber.check(inputNumber);
+        assert (outPut.equals("1A0B"));
+    }
 
 }

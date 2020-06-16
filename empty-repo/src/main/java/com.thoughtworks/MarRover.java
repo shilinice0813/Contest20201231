@@ -15,12 +15,16 @@ public class MarRover {
         switch (this.direction){
             case E:
                 x++;
+                break;
             case W:
                 x--;
+                break;
             case S:
                 y--;
+                break;
             case N:
                 y++;
+                break;
         }
     }
     public void turnDirection(String leftOrRight){

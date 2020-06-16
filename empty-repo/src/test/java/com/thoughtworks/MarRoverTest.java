@@ -11,7 +11,9 @@ public class MarRoverTest {
     }
     @Test
     public void move_E(){
-
+        MarRover marRover=new MarRover(0,0,Direction.E);
+        marRover.move("M");
+        assert (marRover.equals(new MarRover(1,0,Direction.E)));
     }
     @Test
     public void move_S(){

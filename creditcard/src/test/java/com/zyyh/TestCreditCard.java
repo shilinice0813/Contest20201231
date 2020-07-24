@@ -146,4 +146,18 @@ public class TestCreditCard {
         user.computePoint();
         Assert.assertEquals(550,user.getTotalPoint());
     }
+    @Test
+    public void test_vip_user_creditcard_by_stages_in_5000(){
+        //新建用户，VIP
+        User user=new User(true);
+        //初始化信用卡系统
+        CreditCardSystem system=new CreditCardSystem();
+        //用户在系统注册
+        system.addUser(user);
+        //用户使用信用卡分期消费1000
+        user.setPayStrategy(new PayByCreditCardBySatges(3000));
+        //计算积分
+        user.computePoint();
+        Assert.assertEquals(450,user.getTotalPoint());
+    }
 }

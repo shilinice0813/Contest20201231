@@ -42,7 +42,7 @@ public class TestCreditCard {
         CreditCardSystem system=new CreditCardSystem();
         //用户在系统注册
         system.addUser(user);
-        //用户使用pos消费1000
+        //用户使用信用卡快捷消费1000
         user.setPayStrategy(new PayByCreditCardDirect(1000));
         //计算积分
         user.computePoint();
@@ -56,7 +56,7 @@ public class TestCreditCard {
         CreditCardSystem system=new CreditCardSystem();
         //用户在系统注册
         system.addUser(user);
-        //用户使用pos消费1000
+        //用户使用信用卡快捷消费1000
         user.setPayStrategy(new PayByCreditCardDirect(3000));
         //计算积分
         user.computePoint();
@@ -70,7 +70,7 @@ public class TestCreditCard {
         CreditCardSystem system=new CreditCardSystem();
         //用户在系统注册
         system.addUser(user);
-        //用户使用pos消费1000
+        //用户使用信用卡分期消费1000
         user.setPayStrategy(new PayByCreditCardBySatges(3000));
         //计算积分
         user.computePoint();
@@ -84,10 +84,26 @@ public class TestCreditCard {
         CreditCardSystem system=new CreditCardSystem();
         //用户在系统注册
         system.addUser(user);
-        //用户使用pos消费1000
+        //用户使用信用卡分期消费1000
         user.setPayStrategy(new PayByCreditCardBySatges(6000));
         //计算积分
         user.computePoint();
         Assert.assertEquals(700,user.getTotalPoint());
     }
+    @Test
+    public void test_vip_user_pos(){
+        //新建用户，VIP
+        User user=new User(true);
+        //初始化信用卡系统
+        CreditCardSystem system=new CreditCardSystem();
+        //用户在系统注册
+        system.addUser(user);
+        //用户使用pos消费1000
+        user.setPayStrategy(new PayByPos(1000));
+        //计算积分
+        user.computePoint();
+        Assert.assertEquals(150,user.getTotalPoint());
+    }
+
+
 }

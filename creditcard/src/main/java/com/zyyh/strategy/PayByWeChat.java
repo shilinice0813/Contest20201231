@@ -1,4 +1,6 @@
-package com.zyyh;
+package com.zyyh.strategy;
+
+import com.zyyh.PayStyle;
 
 public class PayByWeChat implements PayStrategy{
     public int amount;

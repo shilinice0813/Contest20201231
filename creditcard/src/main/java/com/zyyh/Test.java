@@ -1,5 +1,10 @@
 package com.zyyh;
 
+import com.zyyh.strategy.PayByCreditCardBySatges;
+import com.zyyh.strategy.PayByCreditCardDirect;
+import com.zyyh.strategy.PayByPos;
+import com.zyyh.strategy.PayByWeChat;
+
 public class Test {
     public static void main(String[] args) {
         //创建四位用户
@@ -42,6 +47,9 @@ public class Test {
 
         system.printRecord(user1);
         system.printRecord(user2);
+
+        system.printRecordHtml(user1);
+        system.printRecordHtml(user2);
     }
 
 }

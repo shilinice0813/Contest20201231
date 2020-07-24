@@ -19,4 +19,11 @@ public class CreditCardSystem {
             System.out.println(info.getDateTime()+" "+info.getPayStyleInfo()+info.getPayAmount()+",积分+"+info.getPoint());
         }
     }
+
+    public void printRecordHtml(User user) {
+        System.out.println("<h2>总分：<b>"+user.getTotalPoint()+"</b></h2>");
+        for (PayInfo info :user.getPayInfoList() ) {
+            System.out.println("<p>"+info.getDateTime()+" "+info.getPayStyleInfo()+info.getPayAmount()+",积分<b>+"+info.getPoint()+"</b></p>");
+        }
+    }
 }

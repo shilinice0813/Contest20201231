@@ -1,5 +1,9 @@
 package com.zyyh;
 
+import com.zyyh.strategy.PayByCreditCardBySatges;
+import com.zyyh.strategy.PayByCreditCardDirect;
+import com.zyyh.strategy.PayByPos;
+import com.zyyh.strategy.PayByWeChat;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -7,9 +7,14 @@ package com.box;
 public class Box {
     private int num;
     private String time;
-    private String hashNum;
-    private String lastBoxHashNum;
-    private String mysticalNum;
+    private long hashNum;
+    private long lastBoxHashNum;
+    private long mysticalNum;
+
+    public Box(int num, long lastBoxHashNum) {
+        this.num = num;
+        this.lastBoxHashNum = lastBoxHashNum;
+    }
 
     public int getNum() {
         return num;
@@ -27,27 +32,27 @@ public class Box {
         this.time = time;
     }
 
-    public String getHashNum() {
+    public long getHashNum() {
         return hashNum;
     }
 
-    public void setHashNum(String hashNum) {
+    public void setHashNum(long hashNum) {
         this.hashNum = hashNum;
     }
 
-    public String getLastBoxHashNum() {
+    public long getLastBoxHashNum() {
         return lastBoxHashNum;
     }
 
-    public void setLastBoxHashNum(String lastBoxHashNum) {
+    public void setLastBoxHashNum(long lastBoxHashNum) {
         this.lastBoxHashNum = lastBoxHashNum;
     }
 
-    public String getMysticalNum() {
+    public long getMysticalNum() {
         return mysticalNum;
     }
 
-    public void setMysticalNum(String mysticalNum) {
+    public void setMysticalNum(long mysticalNum) {
         this.mysticalNum = mysticalNum;
     }
 

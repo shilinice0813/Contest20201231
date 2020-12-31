@@ -6,7 +6,6 @@ package com.box;
  */
 public class Box {
     private int num;
-    private String time;
     private long hashNum;
     private long lastBoxHashNum;
     private long mysticalNum;
@@ -22,14 +21,6 @@ public class Box {
 
     public void setNum(int num) {
         this.num = num;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
     }
 
     public long getHashNum() {
@@ -58,6 +49,6 @@ public class Box {
 
     @Override
     public String toString() {
-        return this.num+this.time+this.lastBoxHashNum+this.mysticalNum;
+        return this.num+this.lastBoxHashNum+this.mysticalNum+"";
     }
 }

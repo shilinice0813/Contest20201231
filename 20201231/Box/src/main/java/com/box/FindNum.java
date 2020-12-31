@@ -30,4 +30,26 @@ public class FindNum {
         return mysticalNum;
     }
 
+    /**
+     * 方法运行主类：求10个宝箱的神秘数字
+     * @param args
+     */
+    public static void main(String[] args) {
+        //初始化10个宝箱
+        Box[] boxes=new Boxes().getBoxes();
+        //初始化神秘数字
+        long mysticalNum=0;
+        //循环求解10个宝箱的神秘数字，打开宝箱
+        for (int i=0;i<boxes.length;i++){
+            //求当前宝箱的神秘数字
+            mysticalNum=findMysticalNum(boxes[i]);
+            //计算出当前宝箱的hash值并赋值
+            boxes[i].setHashNum(Sha256Utils.getSHA256StrJava(boxes[i].toString()));
+            //给下一宝箱的"上一宝箱hash值"属性赋值，注意第10个宝箱不需要
+            if(i<9){
+                boxes[i+1].setLastBoxHashNum(boxes[i].getHashNum());
+            }
+            System.out.println((i+1)+"号宝箱："+boxes[i].getMysticalNum()+"   "+boxes[i].getHashNum());
+        }
+    }
 }

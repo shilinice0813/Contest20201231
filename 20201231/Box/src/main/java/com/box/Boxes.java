@@ -1,6 +1,7 @@
 package com.box;
 
 /**
+ * 宝箱类集合
  * @author : shili
  * @date : 15:25 2020/12/31
  */

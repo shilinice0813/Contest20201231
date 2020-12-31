@@ -1,13 +1,26 @@
 package com.box;
 
 /**
+ * 宝箱类
  * @author : shili
  * @date : 15:24 2020/12/31
  */
 public class Box {
+    /**
+     * 宝箱编号
+     */
     private int num;
+    /**
+     * 宝箱hash
+     */
     private String hashNum;
+    /**
+     * 上一宝箱hash
+     */
     private String lastBoxHashNum;
+    /**
+     * 打开宝箱的神秘数字
+     */
     private long mysticalNum;
 
     public Box(int num, String lastBoxHashNum) {

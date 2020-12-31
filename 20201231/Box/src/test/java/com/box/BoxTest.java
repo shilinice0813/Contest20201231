@@ -1,5 +1,7 @@
 package com.box;
 
+import org.junit.Test;
+
 /**
  * 需求分析：
  * 1-10号宝箱需要逐个开启，只有开启第一个宝箱之后，才能同时找到神秘数字和该宝箱的hash值，
@@ -12,4 +14,8 @@ package com.box;
  * @date : 15:05 2020/12/31
  */
 public class BoxTest {
+    @Test
+    public void Given_Boxes_When_Now_Then_Pass(){
+
+    }
 }

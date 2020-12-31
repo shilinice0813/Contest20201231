@@ -62,6 +62,6 @@ public class Box {
 
     @Override
     public String toString() {
-        return this.num+this.lastBoxHashNum+this.mysticalNum+"";
+        return this.num+this.lastBoxHashNum+this.mysticalNum;
     }
 }

@@ -25,6 +25,8 @@ public class FindNum {
             box.setMysticalNum(++mysticalNum);
         }
         System.out.println(mysticalNum);
+        System.out.println(box.toString());
+        System.out.println(Sha256Utils.getSHA256StrJava(box.toString()));
         return mysticalNum;
     }
 

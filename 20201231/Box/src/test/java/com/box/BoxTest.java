@@ -1,5 +1,6 @@
 package com.box;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -13,10 +14,17 @@ import org.junit.Test;
  * @date : 15:05 2020/12/31
  */
 public class BoxTest {
-
+    Box[] boxes=new Boxes().getBoxes();
     @Test
     public void Given_Box1_When_Now_Then_GetMysticalNum(){
-
+        //获取神秘数字
+        long mysticalNum = FindNum.findMysticalNum(boxes[0]);
+        //将神秘数字赋值给宝箱
+        boxes[0].setMysticalNum(mysticalNum);
+        //根据得到的神秘数字计算hash
+        String hash = Sha256Utils.getSHA256StrJava(boxes[0].toString());
+        //判断是否以“00000”开头
+        Assert.assertEquals(FindNum.currentBeginNum,hash.substring(0,FindNum.currentBeginNum.length()));
     }
     @Test
     public void Given_Box2_When_Now_Then_GetMysticalNum(){

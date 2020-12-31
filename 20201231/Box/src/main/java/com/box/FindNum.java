@@ -21,9 +21,10 @@ public class FindNum {
         long mysticalNum=1;
         box.setMysticalNum(mysticalNum);
         while(!currentBeginNum.equals(Sha256Utils.getSHA256StrJava(box.toString()).substring(0,currentBeginNum.length()))){
-            System.out.println(mysticalNum);
+
             box.setMysticalNum(++mysticalNum);
         }
+        System.out.println(mysticalNum);
         return mysticalNum;
     }
 

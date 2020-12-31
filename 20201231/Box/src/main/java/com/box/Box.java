@@ -6,11 +6,11 @@ package com.box;
  */
 public class Box {
     private int num;
-    private long hashNum;
-    private long lastBoxHashNum;
+    private String hashNum;
+    private String lastBoxHashNum;
     private long mysticalNum;
 
-    public Box(int num, long lastBoxHashNum) {
+    public Box(int num, String lastBoxHashNum) {
         this.num = num;
         this.lastBoxHashNum = lastBoxHashNum;
     }
@@ -23,19 +23,19 @@ public class Box {
         this.num = num;
     }
 
-    public long getHashNum() {
+    public String getHashNum() {
         return hashNum;
     }
 
-    public void setHashNum(long hashNum) {
+    public void setHashNum(String hashNum) {
         this.hashNum = hashNum;
     }
 
-    public long getLastBoxHashNum() {
+    public String getLastBoxHashNum() {
         return lastBoxHashNum;
     }
 
-    public void setLastBoxHashNum(long lastBoxHashNum) {
+    public void setLastBoxHashNum(String lastBoxHashNum) {
         this.lastBoxHashNum = lastBoxHashNum;
     }
 

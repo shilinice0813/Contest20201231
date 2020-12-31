@@ -128,7 +128,17 @@ public class BoxTest {
     }
     @Test
     public void Given_Box9_When_Now_Then_GetMysticalNum(){
-
+        Given_Box8_When_Now_Then_GetMysticalNum();
+        //获取神秘数字
+        long mysticalNum = FindNum.findMysticalNum(boxes[8]);
+        //将神秘数字赋值给宝箱
+        boxes[8].setMysticalNum(mysticalNum);
+        //根据得到的神秘数字计算hash
+        String hash = Sha256Utils.getSHA256StrJava(boxes[8].toString());
+        //把得到的hash赋值给下一宝箱
+        boxes[9].setLastBoxHashNum(hash);
+        //判断是否以“00000”开头
+        Assert.assertEquals(FindNum.currentBeginNum,hash.substring(0,FindNum.currentBeginNum.length()));
     }
     @Test
     public void Given_Box10_When_Now_Then_GetMysticalNum(){

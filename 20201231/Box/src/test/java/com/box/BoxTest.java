@@ -13,8 +13,45 @@ import org.junit.Test;
  * @date : 15:05 2020/12/31
  */
 public class BoxTest {
+
     @Test
-    public void Given_Boxes_When_Now_Then_Pass(){
+    public void Given_Box1_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box2_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box3_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box4_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box5_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box6_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box7_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box8_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box9_When_Now_Then_GetMysticalNum(){
+
+    }
+    @Test
+    public void Given_Box10_When_Now_Then_GetMysticalNum(){
 
     }
 }
